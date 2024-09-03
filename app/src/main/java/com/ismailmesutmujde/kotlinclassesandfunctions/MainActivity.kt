@@ -35,11 +35,12 @@ class MainActivity : AppCompatActivity() {
         println(result)
 
         // Class
-        val homer = Simpson()
+        val homer = Simpson("Homer", 50 , "Nuclear", 100)
         homer.name = "Homer Simpson"
-        homer.age = 50
-        homer.job = "Nuclear"
         println(homer.name)
+        homer.height = 190
+
+
     }
 
     // function
