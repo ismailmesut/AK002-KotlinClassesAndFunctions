@@ -3,20 +3,29 @@ package com.ismailmesutmujde.kotlinclassesandfunctions
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var myTextView: TextView
+    private lateinit var myTextView : TextView
     private lateinit var myButton : Button
+
+    private lateinit var nameText : EditText
+    private lateinit var ageText : EditText
+    private lateinit var jobText : EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         myTextView = findViewById(R.id.textView)
+        myButton = findViewById(R.id.button)
+        nameText = findViewById(R.id.nameText)
+        ageText = findViewById(R.id.ageText)
+        jobText = findViewById(R.id.jobText)
 
         /*
         myButton.setOnClickListener {
