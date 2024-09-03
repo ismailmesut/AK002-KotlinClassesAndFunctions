@@ -12,19 +12,29 @@ class MainActivity : AppCompatActivity() {
 
         // 1) code block, reusable 2) input 3) output - return
 
-        println("hello kotlin")
+        //println("hello kotlin")
         test()
         mySum(10,15)
-        mySum(40,35)
+        val sumResult = mySum(40,35)
+        val result = myMultiply(10,20)
+
+        println(sumResult)
+        println(result)
     }
 
     // function
     fun test() {
-        println("test function")
+        //println("test function")
     }
 
     fun mySum(a:Int, b:Int) {
-        println(a+b)
+        //println(a+b)
+    }
+
+    fun myMultiply(x:Int, y:Int) : Int {
+        //println(x*y)
+        val result = x * y
+        return result
     }
 
 }
