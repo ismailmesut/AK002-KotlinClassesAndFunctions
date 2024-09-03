@@ -39,6 +39,17 @@ class MainActivity : AppCompatActivity() {
         println(homer.name)
         homer.setHeight(50)
 
+        // Nullability
+        var myString : String? =  null
+        myString = "test"
+        println(myString)
+
+        var myAge : Int? = null
+        //myAge = 50
+        // !! : %100 olarak bu değişken null değil
+        // ?  : Nullable işlemi yapmaya devam et, sonuç nullsa null göster
+        println(myAge!! * 10)
+
 
     }
 
