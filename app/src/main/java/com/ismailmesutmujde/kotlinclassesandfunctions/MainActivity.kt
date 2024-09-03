@@ -48,8 +48,30 @@ class MainActivity : AppCompatActivity() {
         //myAge = 50
         // !! : %100 olarak bu değişken null değil
         // ?  : Nullable işlemi yapmaya devam et, sonuç nullsa null göster
-        println(myAge!! * 10)
 
+        // SAFE CODES
+
+        // 1) !!
+        //println(myAge!! * 10)
+
+        // 2) safe call
+        println(myAge?.minus(10))
+
+        // 3) if control
+
+        if (myAge != null) {
+            println(myAge?.minus(10))
+        } else {
+            println("myAge is null")
+        }
+
+        // 4) elvis operator
+        println(myAge?.minus(10) ?: -10)
+
+        // 5) let
+        myAge?.let {
+            println(it*10)
+        }
 
     }
 
