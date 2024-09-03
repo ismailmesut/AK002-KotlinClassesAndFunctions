@@ -1,6 +1,7 @@
 package com.ismailmesutmujde.kotlinclassesandfunctions
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -29,11 +30,15 @@ class MainActivity : AppCompatActivity() {
 
     fun mySum(a:Int, b:Int) {
         //println(a+b)
+        //val myTextView = findViewById<TextView>(R.id.textView)
+        //myTextView.text = "Result : ${a+b}"
     }
 
     fun myMultiply(x:Int, y:Int) : Int {
         //println(x*y)
         val result = x * y
+        val myTextView = findViewById<TextView>(R.id.textView)
+        myTextView.text = "Result : ${x*y}"
         return result
     }
 
