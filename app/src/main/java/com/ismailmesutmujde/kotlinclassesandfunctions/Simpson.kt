@@ -2,7 +2,14 @@ package com.ismailmesutmujde.kotlinclassesandfunctions
 
 // Primary Constructor
 class Simpson(var name : String, var age : Int, var job : String, var weight : Int) {
-    var height = 0
+    private var height = 0
+
+    fun setHeight(num : Int) {
+        if (num > 100) {
+            height = num
+        }
+    }
+
     /*
     // Property
     var name = ""

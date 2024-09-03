@@ -9,8 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var myTextView: TextView
-    lateinit var myButton : Button
+    private lateinit var myTextView: TextView
+    private lateinit var myButton : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,9 +36,8 @@ class MainActivity : AppCompatActivity() {
 
         // Class
         val homer = Simpson("Homer", 50 , "Nuclear", 100)
-        homer.name = "Homer Simpson"
         println(homer.name)
-        homer.height = 190
+        homer.setHeight(50)
 
 
     }
