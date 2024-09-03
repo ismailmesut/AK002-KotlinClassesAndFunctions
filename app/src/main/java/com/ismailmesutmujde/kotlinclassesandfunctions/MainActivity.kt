@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var nameText : EditText
     private lateinit var ageText : EditText
     private lateinit var jobText : EditText
+    var name = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         nameText = findViewById(R.id.nameText)
         ageText = findViewById(R.id.ageText)
         jobText = findViewById(R.id.jobText)
+
 
         /*
         myButton.setOnClickListener {
@@ -44,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         println(result)
 
         // Class
-        val homer = Simpson("Homer", 50 , "Nuclear", 100)
+        val homer = Simpson("Homer", 50 , "Nuclear")
         println(homer.name)
         homer.setHeight(50)
 
@@ -103,7 +105,25 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun buttonClicked(view : View) {
-        myTextView.text = "Button Clicked"
+        //myTextView.text = "Button Clicked"
+
+        // Scope -> Kapsam
+
+        name = nameText.text.toString()
+        val age = ageText.text.toString().toIntOrNull()
+        val job = jobText.text.toString()
+
+
+
+        if (age != null) {
+            val simpson = Simpson(name, age, job)
+            myTextView.text = "Name: ${simpson.name} Age: ${simpson.age} Job: ${simpson.job}"
+        } else {
+            myTextView.text = "Enter age!"
+        }
+
+
+
     }
 
 }
